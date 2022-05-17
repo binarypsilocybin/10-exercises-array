@@ -30,3 +30,19 @@ const compact = (array) => {
 };
 const datass = [0, 1, false, 2, undefined, '', 3, null];
 console.log(compact(datass)); // [1, 2, 3]
+
+//RETURN OBJECT COMPONSED KEY VALUE PAIRS
+const fromPairs = (array) => {
+  array.reduce((acc, value) => {
+    if (Array.isArray(value)) {
+      acc[value[0]] = value[1];
+    }
+    return acc;
+  }, {});
+};
+
+const dataZ = [
+  ['a', 1],
+  ['b', 2],
+];
+console.log(fromPairs(dataZ)); // { 'a': 1, 'b': 2 }
