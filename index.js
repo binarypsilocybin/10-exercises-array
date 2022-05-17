@@ -22,3 +22,11 @@ const reverse = (array) => {
 };
 const datas = [1, 2, 3];
 console.log(reverse(datas)); // [3, 2, 1]
+
+//CLEAR UNNECESSARY ELEMENTS
+const compact = (array) => {
+  return array.filter(Number);
+  //array.filter((number) => number);
+};
+const datass = [0, 1, false, 2, undefined, '', 3, null];
+console.log(compact(datass)); // [1, 2, 3]
